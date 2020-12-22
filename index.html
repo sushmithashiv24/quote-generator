@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Quote Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://www.google.com/s2/u/0/favicons?domain=prerana-nawar.netlify.com"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- <button id="demo" class="downloadtable" onclick="downloadtable()"> Download Table</button> -->
+
+    <section id="quote-card">
+      <div id="btn-flex">
+        <button id="btn-getquote">New Quote</button>
+
+        <button id="tweet">Tweet</button>
+        <!-- <input type="button" value="" id="tweet"> -->
+        <button id="demo" onclick="downloadtable()">Download</button>
+      </div>
+      <div id="output">
+        <span><img src="quote.png" alt="" /></span>
+        <div id="quote-text"></div>
+        <div id="author-text"></div>
+      </div>
+    </section>
+    <!-- <div class="loader" id="loader"></div> -->
+    <div class="loader" id="loader" hidden></div>
+
+    <script src="html2canvas.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* #0E1516 */
+
+:root {
+  --body-bg: #0e1516;
+  --card-bg: #233032;
+  --text-color: #fff;
+  --author-text: #a2abad;
+}
+
+body {
+  background-color: var(--body-bg);
+  color: var(--text-color);
+}
+
+#quote-card {
+  padding: 2rem;
+  margin-top: 5rem;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-left: solid 7px #2a393b;
+  background-color: var(--card-bg);
+  /* box-shadow: inset 15.62px 15.62px 21px #192224, inset -15.62px -15.62px 21px #2D3E40; */
+  box-shadow: -14px -14px 37px #161e20, 14px 14px 15px #000;
+  border-radius: 2rem;
+}
+
+#btn-flex {
+  display: flex;
+  gap: 1rem;
+}
+
+#btn-getquote,
+#demo,
+#tweet {
+  background: none;
+  border: none;
+  font-size: larger;
+  border: solid #fff 1px;
+  padding: 0.7rem 1rem;
+  border-radius: 2rem;
+  color: #f3f3f3;
+  outline: none;
+  cursor: pointer;
+}
+
+/* #tweet {
+background: none;
+outline: none;
+cursor: pointer;
+border: none;
+/* background-image: url('twitter.png'); 
+}
+#tweet:hover {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+background-image: url('hover-tweet.png');
+}
+*/
+
+#btn-getquote:hover,
+#demo:hover,
+#tweet:hover {
+  border: none;
+  background-color: #f3f3f3;
+  color: #0e1516;
+  /* box-shadow: 11px 11px 21px #141b1d, -11px -11px 21px #324548; */
+  box-shadow: 6px 9px 9px 0px #00000070, -11px -11px 21px #324548;
+}
+
+#output {
+  width: 100%;
+  background-color: #233032;
+  padding: 16rem 2rem 4rem 15rem;
+}
+
+#quote-text {
+  display: inline;
+  padding-left: 2rem;
+  text-align: left;
+  font-size: x-large;
+  padding-bottom: 1rem;
+  /* margin-left: 14rem; */
+  /* width: 80%; */
+}
+
+#author-text {
+  padding-top: 2rem;
+  text-align: left;
+  font-size: 1.3rem;
+  color: var(--author-text);
+}
+
+.loader {
+  border: 10px solid #a2abad;
+  border-top: 10px solid #324548;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 700px) and (max-width: 450px) {
+  #output {
+    padding: 2rem;
+    border-radius: 2rem;
+  }
+  #quote-card {
+    max-width: 98%;
+    margin-top: 11rem;
+    padding: 0;
+  }
+  #btn-flex {
+    display: block;
+    padding: 2rem;
+    padding-bottom: 0;
+  }
+  #btn-getquote,
+  #demo,
+  #tweet {
+    padding: 0.7rem 0.8rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #btn-flex {
+    padding: 1.5rem;
+  }
+  #btn-getquote,
+  #demo,
+  #tweet {
+    padding: 0.7rem 0.5rem;
+  }
+  #quote-card {
+    margin-top: 7rem;
+  }
+}
+
+/* .loader {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+    } */
+
+/* .loader div {
+        position: absolute;
+        top: 33px;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: #fff;
+        animation-timing-function: cubic-bezier(0, 1, 1, 0);
+    }
+    
+    .loader div:nth-child(1) {
+        left: 8px;
+        animation: loader1 0.6s infinite;
+    }
+    
+    .loader div:nth-child(2) {
+        left: 8px;
+        animation: loader2 0.6s infinite;
+    }
+    
+    .loader div:nth-child(3) {
+        left: 32px;
+        animation: loader2 0.6s infinite;
+    }
+    
+    .loader div:nth-child(4) {
+        left: 56px;
+        animation: loader3 0.6s infinite;
+    }
+    
+    @keyframes loader1 {
+        0% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    
+    @keyframes loader3 {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(0);
+        }
+    }
+    
+    @keyframes loader2 {
+        0% {
+            transform: translate(0, 0);
+        }
+        100% {
+            transform: translate(24px, 0);
+        }
+    } */
